@@ -1,0 +1,39 @@
+/*Pobieranie wszystkich modulow i pluginow*/
+
+"Po pobraniu z githabu materialow w folderze z projektem wpisac komede podana ponizej"
+
+1. npm install 
+
+/*How to add images to HTML*/
+1. path: src/img - tam mozecie dodac nowe zdjecia
+
+2.<img src="/static/img/pictureName"> 
+
+
+/*Run server*/
+
+Jak chcecie zaczac programowac , od razu odpalajcie w folderze tam gdzie jest projekt ta komende (w terminalu).
+Kazdy raz  jak bedziecie cos zmieniac (po nacisnieciu ctrl + s w edytorze tekstu ) strona bedzie automatycznie sie odswiezac.
+  
+Komenda:  npm run dev
+
+/* Jak dodawac nowe pliki JS */
+
+1. path: src/js/
+2. tam stworzycie nowy plik, naprzyklad: "script.js"
+3. dalej wracacie do folderu  src , tam jest plik "index.js" , otwieracie go i wpisujecie "import ./js/nazwa nowego js pliku" , naprzyklad: './js/script.js'
+
+/* css pliki */
+Bedziemy pracowac z plikami nie .css a .scss (mozecie pisac tam taki samy kod jak w css plikach ale sa jeszcze dodatkowe plusy u .scss)
+1. Niech kazda czesc na strone bedzie miala swoj plik .scss , naprzyklad footer ma swoj plik ze stylami a header swoj . Przyklad jak to dziala mozecie zobaczyc tu src/scss/modules
+
+Stworzenie pliku .scss:
+2. Zeby stworzyc nowy plik .scss idziecie tu src/scss/modules. Tam mozecie stworzyc ten plik , naprzyklad blockWithCurrentWheather.scss
+3. Dalej idziecie tu src/scss/main.scss i tam wpisujecie "@import/modules/nazwa pliku scss" , naprzyklad "@import/modules/blockWithCurrentWheather.scss"
+
+plusy uzywania .scss zademonstruje na spotkaniu
+
+
+/*HTML*/ 
+pracowac bedziemy w pliku index.html on sie znajduje tu src/index.html
+
