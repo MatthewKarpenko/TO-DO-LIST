@@ -4,7 +4,7 @@
   "description": "TO DO list",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "dev": "concurrently \"webpack-dev-server --open --config ./build/webpack.dev.conf.js\" \"nodemon server.js\" ",
     "build": "webpack --config ./build/webpack.build.conf.js"
   },
   "browserslist": [
@@ -47,5 +47,10 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.11"
   }
 }
