@@ -2,3 +2,4 @@
 
 // another js file (example)
 import './serverSide'
+import './calendar.js'
