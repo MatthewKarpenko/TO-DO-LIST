@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webpack</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -41,34 +43,18 @@
       <h1>Today</h1>
       <h4>6 tasks remaining</h4>
     </div>
-
-    <div class="item">
-      <h4>Mow Shirley's lawn</h4>
-      <h6>DO IT NOW!</h6>
-    </div>
-
-    <div class="item">
-      <h4>Mow Shirley's lawn</h4>
-      <h6>DO IT NOW!</h6>
-    </div>
-
-    <div class="item">
-      <h4>Mow Charlotte's lawn</h4>
-      <h6>DO IT NOW!</h6>
-    </div>
-
-    <div class="item">
-      <h4>Mow Lacey's lawn</h4>
-      <h6>DO IT NOW!</h6>
-    </div>
-
-    <div class="item">
-      <h4>Mow Angie's lawn</h4>
-      <h6>DO IT NOW!</h6>
-    </div>
+    <ul id="itemek">
+      <li>
+        <div class="item">
+          <h4>Mow Shirley's lawn</h4>
+          <h6>DO IT NOW!</h6>
+        </div>
+        <div class="iconTick" id="checkButton"><i class="fas fa-check" id="tick"></i></div>
+      </li>
+    </ul>
 
     <div class="addButton">
-      <a href="#" class="myButton">Add new item</a>
+      <a href="#" class="myButton" id="button">Add new item</a>
     </div>
 
   </div>

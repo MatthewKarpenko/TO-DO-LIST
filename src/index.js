@@ -14,3 +14,21 @@ import '@fullcalendar/daygrid/main.css';
 import '@fullcalendar/timegrid/main.css';
 import '@fullcalendar/list/main.css';
 
+// add new item
+
+var addButton = document.getElementById('button').addEventListener('click', addButtonClick);
+
+function addButtonClick() {
+    var item = document.getElementById("itemek");
+    var clone = item.firstElementChild.cloneNode(true);
+    item.appendChild(clone);
+    
+    
+    
+    
+    // var copyDiv = document.getElementsByTagName("li");
+    // copyDiv.innerHTML = "";
+    // document.getElementById("liItem").appendChild(copyDiv);
+};
+
+
