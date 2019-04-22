@@ -7,5 +7,171 @@
 // modules
 @import "modules/wrapper.scss";
 
+//main stuff/////////////////////
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+    font-family: 'Titillium Web', sans-serif;
+}
+
 //calendar
 
+#calendar {
+  width: 600px;
+  display: none;
+}
+
+// container styles ////////////////////////////
+
+.container{
+  background-color: #222831;
+  color: #eeeeee;
+  width: 320px;
+  height: 600px;
+  border: 5px solid #b55400;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//header///////////////////////////////////
+
+.header{
+  width: 320px;
+  height:40px;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#date{
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+// list of tasks styles ////////////////////////////
+
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  display: flex;
+  align-items: center;
+  border: 4px solid #b55400;
+  border-radius: 20px;
+  width: 280px;
+  height: 70px;
+  margin-top: 20px;
+  line-height: 0.7rem;
+  justify-content: space-between;
+}
+
+li:hover
+ {
+  background-color: #393e46;
+  
+}
+
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+
+
+//icons styles/////////////////////////////
+
+
+
+.clear{
+    width : 30px;
+    height: 30px;
+    border: 2px solid white;
+    position: absolute;
+    right:20px;
+    top: 20px;
+    }
+
+.clear i{
+    font-size: 30px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+.item i.co{
+    font-size: 25px;
+    width : 30px;
+    height: 30px;
+    border: 2px solid white;
+}
+
+.item i.de{
+    width : 30px;
+    height: 30px;
+    border: 2px solid white;
+}
+
+.item i.co:hover{
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:#6eb200;
+    
+}
+
+.item i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+    
+}
+
+
+//adder styles////////////////////////////
+
+
+.add-to-do{
+    margin: 20px auto;
+    border-radius: 20px;
+    height:40px;
+    width: 200px;
+    background-color: #393e46;
+    border: 3px solid #b55400;
+    
+}
+
+.add-to-do i{
+    position: absolute;
+    font-size: 40px;
+    color: #4162f6;
+}
+
+.add-to-do input{
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+#input{
+  margin-left: 25px;
+}
+
+#input:focus
+{
+ outline: 0
+}
