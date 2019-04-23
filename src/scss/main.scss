@@ -75,6 +75,7 @@ li{
   margin-top: 20px;
   line-height: 0.7rem;
   justify-content: space-between;
+  font-size: 22px;
 }
 
 li:hover
@@ -96,16 +97,16 @@ li:hover
 .clear{
     width : 30px;
     height: 30px;
-    border: 2px solid white;
     position: absolute;
     right:20px;
-    top: 20px;
+    top: 25px;
     }
 
 .clear i{
     font-size: 30px;
     color: #FFF;
 }
+
 .clear i:hover{
     cursor: pointer;
     text-shadow: 1px 3px 5px #000;
@@ -113,31 +114,40 @@ li:hover
 }
 
 .item i.co{
+    cursor: pointer;
+    position: relative;
+    left: 20px;
     font-size: 25px;
     width : 30px;
     height: 30px;
-    border: 2px solid white;
 }
 
 .item i.de{
+    font-size: 25px;
     width : 30px;
     height: 30px;
-    border: 2px solid white;
+    position: relative;
+    right: 10px;    
 }
 
 .item i.co:hover{
     cursor: pointer;
 }
+
 .fa-check-circle{
     color:#6eb200;
-    
 }
 
 .item i.de:hover{
     color:#af0000;
     cursor: pointer;
-    
+    }
+
+
+.fa-circle:hover{
+    color: #6eb200;
 }
+
 
 
 //adder styles////////////////////////////
@@ -150,7 +160,6 @@ li:hover
     width: 200px;
     background-color: #393e46;
     border: 3px solid #b55400;
-    
 }
 
 .add-to-do i{
@@ -165,6 +174,7 @@ li:hover
     background-color: transparent;
     border: none;
     font-size: 20px;
+    color: white; 
 }
 
 #input{
