@@ -21,7 +21,7 @@ const input = document.getElementById("input");
 const addButton = document.getElementById("add");
 
 const CHECK = "fa-check-circle";
-const UNCHECK = "fa-circle-thin";
+const UNCHECK = "fa-circle";
 const LINE_THROUGH = "lineThrough";
 
 let LIST = [0],
@@ -67,7 +67,7 @@ function addToDo(toDo, id, done, trash) {
         `<li class="item">
         <i class="fa ${DONE} co" job="complete" id="${id}"></i>
         <p class="text ${LINE}"> ${toDo} </p>
-        <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
+        <i class="fas fa-trash-alt de" job="delete" id="${id}"></i>
     </li>`;
 
     const position = "beforeend";
