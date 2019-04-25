@@ -29,6 +29,7 @@ MongoClient.connect(url, function(err, client) {
   //client.close();
 }); */
 
+app.use(express.json());
 app.use("/api/tasks", tasks);
 
 // the __dirname is the current directory from where the script is running

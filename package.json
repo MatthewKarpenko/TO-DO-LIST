@@ -54,6 +54,7 @@
     "@fullcalendar/interaction": "^4.0.2",
     "@fullcalendar/list": "^4.0.1",
     "@fullcalendar/timegrid": "^4.0.1",
+    "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "dgram": "^1.0.1",
     "dns": "^0.2.2",
