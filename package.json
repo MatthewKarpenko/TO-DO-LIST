@@ -55,8 +55,11 @@
     "@fullcalendar/list": "^4.0.1",
     "@fullcalendar/timegrid": "^4.0.1",
     "concurrently": "^4.1.0",
+    "dgram": "^1.0.1",
+    "dns": "^0.2.2",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
+    "mongodb": "^3.2.3",
     "nodemon": "^1.18.11"
   }
 }
