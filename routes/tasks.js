@@ -5,10 +5,8 @@ const { Task, validate } = require("../models/task");
 const tasks = express.Router();
 
 tasks.get("/", async (req, res) => {
-  const tasks = await Task.find();
-  //console.log(tasks);
+  const tasks = await Task.find().sort("date");
   res.send(tasks);
-  //res.send("Task");
 });
 
 tasks.post("/", async (req, res) => {
@@ -23,17 +21,45 @@ tasks.post("/", async (req, res) => {
 });
 
 tasks.put("/:id", async (req, res) => {
-  const task = await Task.findByIdAndUpdate(
-    req.params.id,
-    {
-      text: req.body.text,
-      isDone: req.body.isDone,
-      date: req.body.date
-    },
-    { new: true }
-  );
 
-  res.send(task);
+  //let date = await Task.findById(req.params.id).date;
+
+  //console.log(date);
+
+  //date = date.date;
+
+  //console.log(date);
+
+  if(!req.body.date)
+  {
+    //let date = await Task.findById(req.params.id).date;
+
+    const task = await Task.findByIdAndUpdate(
+      req.params.id,
+      {
+        text: req.body.text,
+        isDone: req.body.isDone
+        //date: req.body.date
+      },
+      { new: true }
+    );
+
+    res.send(task);
+  } else {
+    const task = await Task.findByIdAndUpdate(
+      req.params.id,
+      {
+        text: req.body.text,
+        isDone: req.body.isDone,
+        date: req.body.date
+      },
+      { new: true }
+    );
+
+    res.send(task);
+  }
+
+  
 });
 
 tasks.delete("/:id", async (req, res) => {
