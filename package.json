@@ -49,11 +49,13 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "@fullcalendar/core": "^4.0.2",
     "@fullcalendar/daygrid": "^4.0.1",
     "@fullcalendar/interaction": "^4.0.2",
     "@fullcalendar/list": "^4.0.1",
     "@fullcalendar/timegrid": "^4.0.1",
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "dgram": "^1.0.1",
@@ -63,6 +65,7 @@
     "joi": "^14.3.1",
     "mongodb": "^3.2.3",
     "mongoose": "^5.5.3",
+    "node-fetch": "^2.4.1",
     "nodemon": "^1.18.11"
   }
 }
