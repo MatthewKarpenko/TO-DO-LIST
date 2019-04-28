@@ -6,7 +6,9 @@ const tasks = express.Router();
 
 tasks.get("/", async (req, res) => {
   const tasks = await Task.find();
+ 
   res.send(tasks);
+  // console.log(tasks);
 });
 
 tasks.post("/", async (req, res) => {
@@ -31,7 +33,7 @@ tasks.delete("/id=:id", async (req, res) => {
 
   res.send(task);
 
-  res.send("Deleted task");
+  //res.send("Deleted task");
 });
 
 tasks.get("/isDone=:isDone", async (req, res) => {
