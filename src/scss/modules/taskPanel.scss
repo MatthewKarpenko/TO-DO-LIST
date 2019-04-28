@@ -3,7 +3,6 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/leather.png");
     font-family: 'Titillium Web', sans-serif;
     display: flex;
-    align-items: stretch;
 }
 
 // container styles ////////////////////////////
@@ -16,6 +15,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
 
 //header///////////////////////////////////
 
@@ -39,7 +40,7 @@ html {
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        //align-items: stretch;
     }
 
     li {
@@ -131,6 +132,10 @@ html {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    body {
+        margin: 0 auto;
+
+    }
 
     .container {
         margin: 0 auto;
@@ -219,6 +224,10 @@ html {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    body {
+        margin: 0 auto;
+    }
+
     .container {
         margin: 0 auto;
         min-width: 312px;
@@ -307,8 +316,11 @@ html {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    body {
+        margin: 0 auto;
+    }
+
     .container {
-        
         margin: 0 auto;
         min-width: 760px;
         max-width: 900px;
@@ -316,13 +328,19 @@ html {
 
     }
 
+    .container h1 {
+        font-size: 40px;
+        margin: 35px 0;
+    }
+
     .header {
         height: 40px;
+        margin-bottom: 10px;
     }
 
     #date {
-        font-size: 24px;
-        margin: 10px 0;
+        font-size: 30px;
+        margin: 15px 0;
     }
 
     ul {
@@ -335,7 +353,7 @@ html {
         margin: 15px 20px;
         height: 20%;
         line-height: 0.7rem;
-        font-size: 22px;
+        font-size: 26px;
         border-radius: 20px;
         max-width: 760px;
     }
@@ -343,7 +361,7 @@ html {
     li p {
         max-width: 80%;
         margin: 22px 22px;
-        line-height: 27px;
+        line-height: 30px;
     }
 
     //////////////////////////////////////////////////////////////////
@@ -378,7 +396,7 @@ html {
         margin: 20px auto;
         border-radius: 20px;
         min-height: 40px;
-        width: 50%;
+        width: 60%;
     }
 
     .add-to-do i {
@@ -389,13 +407,208 @@ html {
     .add-to-do input {
         min-height: 35px;
         width: 100%;
-        font-size: 20px;
+        font-size: 26px;
         margin: 0 25px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    body {
+        margin: 0 auto;
+    }
+
+    .container {
+        margin: 0 auto;
+        min-width: 760px;
+        max-width: 900px;
+        border-radius: 20px;
+
+    }
+
+    .container h1 {
+        font-size: 40px;
+        margin: 35px 0;
+    }
+
+    .header {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    #date {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        border-radius: 20px;
+        margin: 15px 20px;
+        height: 20%;
+        line-height: 0.7rem;
+        font-size: 26px;
+        border-radius: 20px;
+        max-width: 760px;
+    }
+
+    li p {
+        max-width: 80%;
+        margin: 22px 22px;
+        line-height: 30px;
+    }
+
+    //////////////////////////////////////////////////////////////////
+    .clear {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .clear i {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .item i.co {
+        left: 20px;
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item i.de {
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        right: 10px;
+    }
+
+    ////////////////////////////////////////////////////////
+    .add-to-do {
+        margin: 20px auto;
+        border-radius: 20px;
+        min-height: 40px;
+        width: 60%;
+    }
+
+    .add-to-do i {
+        position: absolute;
+        font-size: 40px;
+    }
+
+    .add-to-do input {
+        min-height: 35px;
+        width: 100%;
+        font-size: 26px;
+        margin: 0 25px;
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    body {
+        margin: 0 auto;
+    }
+
+    .container {
+        margin: 0 auto;
+        min-width: 1180px;
+        max-width: 2500px;
+        border-radius: 20px;
+    }
+
+    .container h1 {
+        font-size: 40px;
+        margin: 35px 0;
+    }
+
+    .header {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    #date {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    ul {
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 800px;
+        align-content: center;
+    }
+
+    li {
+        border-radius: 20px;
+        margin: 15px 20px;
+        height: 20%;
+        line-height: 0.7rem;
+        font-size: 26px;
+        border-radius: 20px;
+        max-width: 500px;
+        flex: 1;
+
+    }
+
+    li p {
+        max-width: 80%;
+        margin: 22px 22px;
+        line-height: 30px;
+    }
+
+    //////////////////////////////////////////////////////////////////
+    .clear {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .clear i {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .item i.co {
+        left: 20px;
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item i.de {
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        right: 10px;
+    }
+
+    ////////////////////////////////////////////////////////
+    .add-to-do {
+        margin: 20px auto;
+        border-radius: 20px;
+        min-height: 40px;
+        width: 60%;
+    }
+
+    .add-to-do i {
+        position: absolute;
+        font-size: 40px;
+    }
+
+    .add-to-do input {
+        min-height: 35px;
+        width: 100%;
+        font-size: 26px;
+        margin: 0 25px;
+    }
+}
