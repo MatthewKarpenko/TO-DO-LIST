@@ -1,18 +1,9 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/leather.png");
     font-family: 'Titillium Web', sans-serif;
-    min-width: 320px;
-    max-width: 480px;
-    min-height: 100vh;
-}
-
-//calendar
-
-#calendar {
-    width: 600px;
-    display: none;
+    display: flex;
+    align-items: stretch;
 }
 
 // container styles ////////////////////////////
@@ -20,23 +11,20 @@ body {
 .container {
     background-color: #222831;
     color: #eeeeee;
-    width:100%;
-    min-height: 100vh;
-    margin: 0 auto;
+    border: 4px solid #b55400;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow-y: hidden;
 }
 
 //header///////////////////////////////////
 
 .header {
-    width: 320px;
-    height: 40px;
     position: relative;
-    text-align: center;
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #date {
@@ -46,136 +34,368 @@ body {
 }
 
 // list of tasks styles ////////////////////////////
+html {
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    li {
+        display: flex;
+        align-items: center;
+        border: 4px solid #b55400;
+        justify-content: space-between;
+    }
+
+    li p {
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    li:hover {
+        background-color: #393e46;
+
+    }
+
+    .lineThrough {
+        text-decoration: line-through;
+        color: #ccc;
+    }
 }
-
-li {
-    display: flex;
-    align-items: center;
-    border: 4px solid #b55400;
-    border-radius: 20px;
-    width: 280px;
-    height: 20%;
-    margin-top: 20px;
-    line-height: 0.7rem;
-    justify-content: space-between;
-    font-size: 22px;
-     p {
-         width: 165px;
-         word-wrap: break-word;
-         line-height: 27px;
-     }
-}
-
-li:hover {
-    background-color: #393e46;
-
-}
-
-.lineThrough {
-    text-decoration: line-through;
-    color: #ccc;
-}
-
 
 //icons styles/////////////////////////////
+html {
+
+    .clear i {
+        color: #FFF;
+    }
+
+    .clear i:hover {
+        cursor: pointer;
+        text-shadow: 1px 3px 5px #000;
+        transform: rotate(45deg);
+    }
+
+    .item i.co {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .item i.co:hover {
+        cursor: pointer;
+    }
+
+    .fa-check-circle {
+        color: #6eb200;
+    }
+
+    .item i.de:hover {
+        color: #af0000;
+        cursor: pointer;
+    }
 
 
-
-.clear {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 20px;
-    top: 25px;
+    .fa-circle:hover {
+        color: #6eb200;
+    }
 }
-
-.clear i {
-    font-size: 30px;
-    color: #FFF;
-}
-
-.clear i:hover {
-    cursor: pointer;
-    text-shadow: 1px 3px 5px #000;
-    transform: rotate(45deg);
-}
-
-.item i.co {
-    cursor: pointer;
-    position: relative;
-    left: 20px;
-    font-size: 25px;
-    width: 30px;
-    height: 30px;
-}
-
-.item i.de {
-    font-size: 25px;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    right: 10px;
-}
-
-.item i.co:hover {
-    cursor: pointer;
-}
-
-.fa-check-circle {
-    color: #6eb200;
-}
-
-.item i.de:hover {
-    color: #af0000;
-    cursor: pointer;
-}
-
-
-.fa-circle:hover {
-    color: #6eb200;
-}
-
-
 
 //adder styles////////////////////////////
+html {
+    .add-to-do {
+        background-color: #393e46;
+        border: 3px solid #b55400;
+        display: flex;
+    }
 
+    .add-to-do i {
+        color: #4162f6;
+    }
 
-.add-to-do {
-    margin: 20px auto;
-    border-radius: 20px;
-    height: 40px;
-    width: 200px;
-    background-color: #393e46;
-    border: 3px solid #b55400;
+    .add-to-do input {
+        background-color: transparent;
+        border: none;
+        color: white;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    #input:focus {
+        outline: 0
+    }
+
 }
 
-.add-to-do i {
-    position: absolute;
-    font-size: 40px;
-    color: #4162f6;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .container {
+        margin: 0 auto;
+        min-width: 312px;
+        max-width: 600px;
+
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    #date {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    li {
+        border-radius: 20px;
+        margin: 15px 20px;
+        height: 20%;
+        line-height: 0.7rem;
+        font-size: 22px;
+        border-radius: 20px;
+        max-width: 500px;
+    }
+
+    li p {
+        max-width: 60%;
+        margin: 22px 22px;
+        line-height: 27px;
+    }
+
+    //////////////////////////////////////////////////////////////////
+    .clear {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .clear i {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .item i.co {
+        left: 20px;
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item i.de {
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        right: 10px;
+    }
+
+    ////////////////////////////////////////////////////////
+    .add-to-do {
+        margin: 20px auto;
+        border-radius: 20px;
+        min-height: 40px;
+        width: 50%;
+    }
+
+    .add-to-do i {
+        position: absolute;
+        font-size: 40px;
+    }
+
+    .add-to-do input {
+        min-height: 35px;
+        width: 100%;
+        font-size: 20px;
+        margin: 0 25px;
+    }
 }
 
-.add-to-do input {
-    height: 35px;
-    width: 310px;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    color: white;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container {
+        margin: 0 auto;
+        min-width: 312px;
+        max-width: 600px;
+        border-radius: 20px;
+
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    #date {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        border-radius: 20px;
+        margin: 15px 20px;
+        height: 20%;
+        line-height: 0.7rem;
+        font-size: 22px;
+        border-radius: 20px;
+        max-width: 500px;
+    }
+
+    li p {
+        max-width: 60%;
+        margin: 22px 22px;
+        line-height: 27px;
+    }
+
+    //////////////////////////////////////////////////////////////////
+    .clear {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .clear i {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .item i.co {
+        left: 20px;
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item i.de {
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        right: 10px;
+    }
+
+    ////////////////////////////////////////////////////////
+    .add-to-do {
+        margin: 20px auto;
+        border-radius: 20px;
+        min-height: 40px;
+        width: 50%;
+    }
+
+    .add-to-do i {
+        position: absolute;
+        font-size: 40px;
+    }
+
+    .add-to-do input {
+        min-height: 35px;
+        width: 100%;
+        font-size: 20px;
+        margin: 0 25px;
+    }
 }
 
-#input {
-    margin-left: 25px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        
+        margin: 0 auto;
+        min-width: 760px;
+        max-width: 900px;
+        border-radius: 20px;
+
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    #date {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        border-radius: 20px;
+        margin: 15px 20px;
+        height: 20%;
+        line-height: 0.7rem;
+        font-size: 22px;
+        border-radius: 20px;
+        max-width: 760px;
+    }
+
+    li p {
+        max-width: 80%;
+        margin: 22px 22px;
+        line-height: 27px;
+    }
+
+    //////////////////////////////////////////////////////////////////
+    .clear {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .clear i {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .item i.co {
+        left: 20px;
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item i.de {
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        right: 10px;
+    }
+
+    ////////////////////////////////////////////////////////
+    .add-to-do {
+        margin: 20px auto;
+        border-radius: 20px;
+        min-height: 40px;
+        width: 50%;
+    }
+
+    .add-to-do i {
+        position: absolute;
+        font-size: 40px;
+    }
+
+    .add-to-do input {
+        min-height: 35px;
+        width: 100%;
+        font-size: 20px;
+        margin: 0 25px;
+    }
 }
 
-#input:focus {
-    outline: 0
-}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
