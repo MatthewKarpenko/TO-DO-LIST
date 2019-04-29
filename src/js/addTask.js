@@ -1,3 +1,6 @@
+import { getTasks } from "./requests";
+//import database from "./database";
+
 const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
@@ -11,7 +14,9 @@ const LINE_THROUGH = "lineThrough";
 let LIST = [0],
     id = 0;
 
-let data = localStorage.getItem("TODO");
+let data = localStorage.getItem("TODO"); //tutaj wrzucic getter z serwera
+//let data = getTasks();
+
 
 if (data) {
     LIST = JSON.parse(data);
@@ -24,7 +29,7 @@ if (data) {
 
 function loadList(array) {
     array.forEach(function (item) {
-        addToDo(item.name, item.id, item.done, item.trash);
+        addToDo(item.text, item.id, item.isDone, item.trash);
     });
 }
 
@@ -44,14 +49,14 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 //add to do func
 
-function addToDo(toDo, id, done, trash) {
+function addToDo(toDo, id, isDone, trash) {
 
     if (trash) {
         return;
     }
 
-    const DONE = done ? CHECK : UNCHECK;
-    const LINE = done ? LINE_THROUGH : "";
+    const DONE = isDone ? CHECK : UNCHECK;
+    const LINE = isDone ? LINE_THROUGH : "";
 
     const item =
         `<li class="item">
@@ -74,9 +79,9 @@ function addTask(event) {
             addToDo(toDo, id, false, false)
 
             LIST.push({
-                name: toDo,
+                text: toDo,
                 id: id,
-                done: false,
+                isDone: false,
                 trash: false
             });
 
@@ -96,7 +101,7 @@ function completeToDo(element) {
     element.classList.toggle(UNCHECK);
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
 
-    LIST[element.id].done = LIST[element.id].done ? false : true;
+    LIST[element.id].isDone = LIST[element.id].isDone ? false : true;
 }
 
 function removeToDo(element) {
