@@ -5,7 +5,7 @@ const URL = "http://localhost:8080/api/tasks/";
 async function getTasks() {
   const response = await fetch(URL);
   const data = await response.json();
-  //console.log(data);
+  console.log(data);
   return data;
 }
 
