@@ -1,4 +1,4 @@
-import { getTasks } from "./requests";
+import { getTasks, deleteTask } from "./requests";
 //import database from "./database";
 
 const clear = document.querySelector(".clear");
@@ -14,22 +14,38 @@ const LINE_THROUGH = "lineThrough";
 let LIST = [0],
     id = 0;
 
-let data = localStorage.getItem("TODO"); //tutaj wrzucic getter z serwera
+//let data = localStorage.getItem("TODO"); //tutaj wrzucic getter z serwera
 //let data = getTasks();
 
+async function generateList() {
+    const data = await getTasks();
+    //console.log(data)
 
-if (data) {
+    if(data) {
+        LIST = data;
+        id = data.length;
+        loadList(data);
+    } else {
+        LIST = [];
+        id = 0;
+    }
+}
+
+generateList();
+//zakomentowane tymczasowo - do wyrzucenia (refactoring na koncu)
+/* if (data) {
     LIST = JSON.parse(data);
     id = LIST.length;
     loadList(LIST);
 } else {
     LIST = [];
     id = 0;
-}
+} */
 
 function loadList(array) {
     array.forEach(function (item) {
-        addToDo(item.text, item.id, item.isDone, item.trash);
+        addToDo(item.text, item._id, item.isDone, item.trash);
+        console.log(item._id)
     });
 }
 
@@ -49,6 +65,7 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 //add to do func
 
+//generates content on website
 function addToDo(toDo, id, isDone, trash) {
 
     if (trash) {

@@ -2,10 +2,11 @@
 
 // another js file (example)
 import "./serverSide";
-import "./calendar.js";
+//import "./calendar.js";
 import "@babel/polyfill";
+import "./addTask.js";
 
-/*
+
 //Przyklady wykorzystania polaczen z serwerem
 import { getTasks, deleteTask, postTask, putTask, getFilteredTasks } from "./requests";
 
@@ -53,4 +54,3 @@ async function getFilteredTasksList(isDone) {
 //fetchTasks();
 
 // KONIEC PRZYKLADU
-*/

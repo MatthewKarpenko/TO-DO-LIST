@@ -1,6 +1,6 @@
 
 // JS - ./js/index.js
-import './js/addTask.js'
+import './js/'
 // SCSS
 import './scss/main.scss'
 // CSS (example)
