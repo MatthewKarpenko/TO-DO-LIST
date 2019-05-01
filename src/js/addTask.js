@@ -1,4 +1,4 @@
-import { getTasks, deleteTask } from "./requests";
+import { getTasks, deleteTask, putTask, postTask } from "./requests";
 //import database from "./database";
 
 const clear = document.querySelector(".clear");
@@ -84,6 +84,7 @@ function addToDo(toDo, id, isDone, trash) {
 
     const position = "afterbegin";
     list.insertAdjacentHTML(position, item);
+
 }
 
 document.addEventListener("keyup", addTask);
@@ -103,7 +104,9 @@ function addTask(event) {
             });
 
             localStorage.setItem("TODO", JSON.stringify(LIST));
-
+    
+            postTask(false, Date.now(), toDo);
+    
             id++;
         }
         input.value = "";
@@ -114,17 +117,37 @@ function addTask(event) {
 // complete to do
 
 function completeToDo(element) {
+    const toDo = LIST.find((toDo) => {
+        return toDo._id === element.id
+    });
+
+    if (!toDo) {
+        console.warn(`unknown todo id: ${element.id}`);
+        return
+    }
+
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
 
-    LIST[element.id].isDone = LIST[element.id].isDone ? false : true;
+    toDo.isDone = toDo.isDone ? false : true;
+    putTask(element.id, toDo);
+
 }
 
 function removeToDo(element) {
+    const toDo = LIST.find((toDo) => {
+        return toDo._id === element.id
+    });
+
     element.parentNode.parentNode.removeChild(element.parentNode);
 
-    LIST[element.id].trash = true;
+    if( toDo ) {
+        toDo.trash = true;
+        deleteTask(toDo._id);    
+    } else {
+        console.warn(`unknown todo id: ${element.id}`)
+    }
 }
 
 list.addEventListener("click", function (event) {
