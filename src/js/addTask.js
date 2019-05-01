@@ -135,6 +135,7 @@ function completeToDo(element) {
 
 }
 
+<<<<<<< HEAD
 function removeToDo(element) {
     const toDo = LIST.find((toDo) => {
         return toDo._id === element.id
@@ -148,6 +149,15 @@ function removeToDo(element) {
     } else {
         console.warn(`unknown todo id: ${element.id}`)
     }
+=======
+async function removeToDo(element) {
+    const result = await deleteTask(element.id);
+    location.reload();
+
+    //element.parentNode.parentNode.removeChild(element.parentNode);
+
+    //LIST[element.id].trash = true;
+>>>>>>> f77ada4615b32c3657e2c89eb8d7114483eb1e7c
 }
 
 list.addEventListener("click", function (event) {
