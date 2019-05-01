@@ -105,7 +105,7 @@ function addTask(event) {
 
             localStorage.setItem("TODO", JSON.stringify(LIST));
     
-            postTask(false, Date.now(), toDo);
+            postTask(false, Date.now, toDo);
     
             id++;
         }
