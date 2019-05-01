@@ -121,10 +121,13 @@ function completeToDo(element) {
     LIST[element.id].isDone = LIST[element.id].isDone ? false : true;
 }
 
-function removeToDo(element) {
-    element.parentNode.parentNode.removeChild(element.parentNode);
+async function removeToDo(element) {
+    const result = await deleteTask(element.id);
+    location.reload();
 
-    LIST[element.id].trash = true;
+    //element.parentNode.parentNode.removeChild(element.parentNode);
+
+    //LIST[element.id].trash = true;
 }
 
 list.addEventListener("click", function (event) {
